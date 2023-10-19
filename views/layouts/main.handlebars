@@ -1,0 +1,40 @@
+{{!-- 如果你想要撰寫自己的 CSS 檔，可以在 /public/stylesheets 裡面開一支自己的 CSS 檔案，然後記得在佈局 (layout) 的 main.handlebars 中使
+<link> 把它載入就可以了。 --}}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant List</title>
+
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  {{!-- rel="stylesheet"：指定链接的关系类型，表示这个链接是一个样式表。
+  href="/stylesheets/bootstrap.css"：href 属性指定了外部样式表文件的路径，这里的路径是相对于当前 HTML 文件的路径。在这个例子中，bootstrap.css 文件位于 /stylesheets
+  目录下。
+  这行代码告诉浏览器在渲染当前网页时，要加载并应用 bootstrap.css 文件中的样式，从而改变网页的外观和排版。
+  通常，外部样式表用于集中管理和重复使用网页的样式，以提高代码的可维护性和可重用性。这有助于将网页结构（HTML）与样式（CSS）分开，使其更易于管理。
+  --}}
+
+</head>
+
+<body>
+
+  <!-- navigation -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Restaurant List</a>
+    </div>
+  </nav>
+
+
+  {{{ body }}}
+
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+
+</body>
+
+</html>
